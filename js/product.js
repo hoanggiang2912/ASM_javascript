@@ -25,12 +25,6 @@ function add_to_cart(id , name , price, src){
     localStorage.setItem('cart' , JSON.stringify(products_arr))
 }
 
-function display_qty(){
-    if(products_arr != null){
-    
-    }
-}
-
 
 
 

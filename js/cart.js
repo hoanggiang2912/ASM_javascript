@@ -41,45 +41,63 @@ function display_cart (){
             var localCartItem = cart[i]
             cartItemImgs[i].src = localCartItem[3]
             cartItemNames[i].innerText = localCartItem[1]
+            totalQty[i].innerText = localCartItem[4]
+            totalPrice[i].innerText = localCartItem[4] * localCartItem[2]
         }
     }
 }
 display_cart()
 
 // calculate total quantity
-function calculate_total(){
-    for(let i = 0 ; i < plusBtns.length ; i++){
-        let qtyInTotal = 1
-        var localCartItem = cart[i]
-        priceInBill.innerText = totalPrice[i].innerText
-        priceInBillVAT.innerText = parseInt(totalPrice[i].innerText) + parseInt(totalPrice[i].innerText) * 0.1
-        plusBtns[i].addEventListener("click" , () => {
-            qtyInTotal++
-            totalQty[i].innerText = qtyInTotal
-            cartItem_checkbox[i].checked = true
-            totalPrice[i].innerText = qtyInTotal * localCartItem[2]
-            priceInBill.innerText = qtyInTotal * localCartItem[2]
-            priceInBillVAT.innerText = qtyInTotal * localCartItem[2] + (qtyInTotal * localCartItem[2]) * 0.1
-        })
+
+function minus (){
+    for(let i = 0 ; i < minusBtns.length ; i++){
+        var cart_item = cart[i]
+        var show_qty = cart_item[4]
         minusBtns[i].addEventListener("click" , () => {
-            if(qtyInTotal > 0) {
-                qtyInTotal--
-                totalQty[i].innerText = qtyInTotal
-                totalPrice[i].innerText = qtyInTotal * localCartItem[2]
-                priceInBill.innerText = qtyInTotal * localCartItem[2]
-                priceInBillVAT.innerText = qtyInTotal * localCartItem[2] + (qtyInTotal * localCartItem[2]) * 0.1
-                if(totalPrice[i].innerText == 0){
-                    cartItem_checkbox[i].checked = false
-                }
+            if(show_qty != 0){
+                show_qty--
+                cartItem_checkbox[i].checked = true;
             }else{
-                qtyInTotal = 0
-                totalQty[i].innerText = qtyInTotal
+                cartItem_checkbox[i].checked = false;
             }
+            totalQty[i].innerText = show_qty
+            calculator_each_product()
         })
     }
 }
-calculate_total()
-
+minus()
+var show_qty = 0
+function plus(){
+    for(let i = 0 ; i < plusBtns.length ; i++){
+        plusBtns[i].addEventListener("click" , () => {
+            show_qty++
+            totalQty[i].innerText = show_qty
+            calculator_each_product()
+        })
+    }
+}
+plus()
+//for each product
+var inTotal = 0
+function calculator_each_product(){
+    for(let i in cart){
+        var cart_item = cart[i]
+        inTotal = cart_item[2] * totalQty[i].innerText
+        totalPrice[i].innerText = inTotal
+    }
+}
+//for all products that displayed
+var final_price = 0
+function calculator_all_products(){
+    for(let i in cart){
+        var cart_item = cart[i]
+        final_price += cart_item[2] * cart_item[4]
+        priceInBill.innerText = final_price
+        priceInBillVAT.innerText = final_price + final_price*0.1
+    }
+}
+calculator_all_products()
 //select all 
 function select_all (){
     selectAll.checked = true;
@@ -104,7 +122,7 @@ function delete_item(){
     }
 }
 //delete
-//save the result in local store
+//save the result in local storage
 //show the cart again
 delete_item()
 
