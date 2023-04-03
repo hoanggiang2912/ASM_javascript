@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="/project/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <div class="header-iner" style="max-width: 1024px;">
+            <a href="index.html">
+                <img src="/img/logowithwhitebackground.png" alt="" class="logo">
+            </a>
+            <ul class="nav">
+                <li class="nav-item"><a href="/project/html/index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="">Thể loại</a>
+                    <div class="menu-child">
+                        <div class="menu-child-items">
+                            <ul class="menu-child-list">
+                                <li><a href="/project/html/tamli-kynangsong.html">Tâm lý - Kỹ năng sống</a></li>
+                                <li><a href="">Văn học</a></li>
+                                <li><a href="">Truyện tranh</a></li>
+                                <li><a href="">Tài liệu - Giáo trình</a></li>
+                                <li><a href="">Kinh tế</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-child-items">
+                            <ul class="menu-child-list">
+                                <li><a href="/project/html/tieuthuyet.html">Tiểu thuyết</a></li>
+                                <li><a href="">Lập trình</a></li>
+                                <li><a href="">Truyện tranh</a></li>
+                                <li><a href="">Giải trí</a></li>
+                                <li><a href="">Ngôn tình</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-child-items">
+                            <ul class="menu-child-list">
+                                <li><a href="/project/html/triethoc.html">Triết học</a></li>
+                                <li><a href="">Kiếm hiệp</a></li>
+                                <li><a href="">Tiếng Anh</a></li>
+                                <li><a href="">Lịch sử</a></li>
+                                <li><a href="">Phật giáo</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-child-items">
+                            <ul class="menu-child-list">
+                                <li><a href="/project/html/laptrinh.html">Lập trình C</a></li>
+                                <li><a href="">Java</a></li>
+                                <li><a href="">Python</a></li>
+                                <li><a href="">Java Script</a></li>
+                                <li><a href="">HTML-CSS</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-child-items">
+                            <ul class="menu-child-list">
+                                <li><a href="/project/html/cotich-thanthoai.html">Cổ tích - Thần thoại</a></li>
+                                <li><a href="">Truyện ma - Kinh dị</a></li>
+                                <li><a href="">Marketing</a></li>
+                                <li><a href="">Trinh thám - Hình sự</a></li>
+                                <li><a href="">Kinh tế - Quản lí</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/project/html/sachtonghop.html">Sách tổng hợp</a></li>
+                <li class="nav-item"><a href="">Blog</a></li>
+                <li class="nav-item"><a href="/project/html/gioithieu.html">Giới thiệu</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" class="input" placeholder="Search...">
+                <button class="btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="signin">
+                <i class="fa-solid fa-user"></i>
+                <a href="/project/html/Log-in-form.html">Đăng Nhập</a>
+            </div>
+            <div class="shopping-cart">
+                <span class="qty_in_cart">0</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="cart-items">
+            <h2 class="cart-items-title">Giỏ hàng</h2>
+            <hr style="border-color: lightgray">
+            <div class="select-all">
+                <div>
+                    <input type="checkbox" name="" id="select-all" style="cursor: pointer">
+                    <label for="select-all" style="margin-left: 15px ; user-select: none; cursor: pointer">Chọn tất cả</label>
+                </div>
+                <p style="transform: translateX(-20px)">Thành tiền</p>
+            </div>
+            <div class="items-wrapper">
+                <div class="cart-item">
+                    <input type="checkbox" name="" checked>
+                    <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ca-phe-cung-tony.jpg" alt="" class="cart-item-img">
+                    <di class="cart-item-detail">
+                        <div class="cart-item-detail-left">
+                            <h2 class="cart-item-name">Cà phê cùng Tony</h2>
+                            <div style="
+                            display: flex;
+                            gap: 10px;
+                            ">
+                                <p class="cart-item-price">72000<s style="margin-left: 10px;">90000</s></p>|
+                                <p class="cart-item-status">In stock</p>
+                            </div >
+                            <div class="qty">
+                                <button class="minus"> - </button>
+                                <button class="total_qty"> 1 </button>
+                                <button class="plus"> + </button>
+                            </div>
+                        </div>
+                        <div class="cart-item-detail-right">
+                            <div class="total">
+                                <h2 class="total-price">72000</h2>
+                            </div>
+                            <di class="cart-item-detail-right-btns">
+                                <a class="save-btn" href="#"><i class="fa-regular fa-heart"></i>Lưu</a>
+                                <a class="delete-btn"><i class="fa-solid fa-trash-can"></i>Xóa</a>
+                            </di >
+                        </div>
+                    </di >
+                </div>
+                <div class="cart-item">
+                    <input type="checkbox" name="" checked>
+                    <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ca-phe-cung-tony.jpg" alt="" class="cart-item-img">
+                    <di class="cart-item-detail">
+                        <div class="cart-item-detail-left">
+                            <h2 class="cart-item-name">Cà phê cùng Tony</h2>
+                            <div style="
+                            display: flex;
+                            gap: 10px;
+                            ">
+                                <p class="cart-item-price">72.000 đ <s style="margin-left: 10px;">90.000 đ</s></p>|
+                                <p class="cart-item-status">In stock</p>
+                            </div >
+                            <div class="qty">
+                                <button> - </button>
+                                <button> 1 </button>
+                                <button> + </button>
+                            </div>
+                        </div>
+                        <div class="cart-item-detail-right">
+                            <div class="total">
+                                <h2 class="total-price">72.000 đ</h2>
+                            </div>
+                            <di class="cart-item-detail-right-btns">
+                                <a class="save-btn" href="#"><i class="fa-regular fa-heart"></i>Lưu</a>
+                                <a class="delete-btn" href="#"><i class="fa-solid fa-trash-can"></i>Xóa</a>
+                            </di >
+                        </div>
+                    </di >
+                </div>
+                <div class="cart-item">
+                    <input type="checkbox" name="" checked>
+                    <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ca-phe-cung-tony.jpg" alt="" class="cart-item-img">
+                    <di class="cart-item-detail">
+                        <div class="cart-item-detail-left">
+                            <h2 class="cart-item-name">Cà phê cùng Tony</h2>
+                            <div style="
+                            display: flex;
+                            gap: 10px;
+                            ">
+                                <p class="cart-item-price">72.000 đ <s style="margin-left: 10px;">90.000 đ</s></p>|
+                                <p class="cart-item-status">In stock</p>
+                            </div >
+                            <div class="qty">
+                                <button> - </button>
+                                <button> 1 </button>
+                                <button> + </button>
+                            </div>
+                        </div>
+                        <div class="cart-item-detail-right">
+                            <div class="total">
+                                <h2 class="total-price">72.000 đ</h2>
+                            </div>
+                            <di class="cart-item-detail-right-btns">
+                                <a class="save-btn" href="#"><i class="fa-regular fa-heart"></i>Lưu</a>
+                                <a class="delete-btn" href="#"><i class="fa-solid fa-trash-can"></i>Xóa</a>
+                            </di >
+                        </div>
+                    </di >
+                </div>
+                <div class="cart-item">
+                    <input type="checkbox" name="" checked>
+                    <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ca-phe-cung-tony.jpg" alt="" class="cart-item-img">
+                    <di class="cart-item-detail">
+                        <div class="cart-item-detail-left">
+                            <h2 class="cart-item-name">Cà phê cùng Tony</h2>
+                            <div style="
+                            display: flex;
+                            gap: 10px;
+                            ">
+                                <p class="cart-item-price">72.000 đ <s style="margin-left: 10px;">90.000 đ</s></p>|
+                                <p class="cart-item-status">In stock</p>
+                            </div >
+                            <div class="qty">
+                                <button> - </button>
+                                <button> 1 </button>
+                                <button> + </button>
+                            </div>
+                        </div>
+                        <div class="cart-item-detail-right">
+                            <div class="total">
+                                <h2 class="total-price">72.000 đ</h2>
+                            </div>
+                            <di class="cart-item-detail-right-btns">
+                                <a class="save-btn" href="#"><i class="fa-regular fa-heart"></i>Lưu</a>
+                                <a class="delete-btn" href="#"><i class="fa-solid fa-trash-can"></i>Xóa</a>
+                            </di >
+                        </div>
+                    </di >
+                </div>
+            </div>
+        </div>
+        <div class="voucher-wrapper">
+            <div class="voucher-box">
+                <div class="voucher-top">
+                    <div class="voucher-top-left">
+                        <i class="fa-solid fa-ticket"></i>
+                        <h2 class="Voucher-title">Mã giảm giá</h2>
+                    </div >
+                    <a href="#" class="voucher-top-right">
+                        Xem thêm <i class="fa-solid fa-greater-than"></i>
+                    </a>
+                </div>
+                <hr>
+                <div class="voucher-item">
+                    <div class="voucher-detail-top">
+                        <div>
+                            <h2 class="voucher-item-name">MÃ GIẢM 10K</h2>
+                            <p>Đơn hàng mua sản phẩm Self-helf từ 100k</p>
+                        </div>
+                        <a href="#">Chi tiết</a>
+                    </div>
+                    <div class="voucher-detail-bottom">
+                        <div>
+                            <div class="voucher-progress"></div>
+                            <p>Mua thêm 120k để được nhận ưu đãi</p>
+                        </div>
+                        <a href="#" class="voucher-confirm-btn">Mua thêm</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="voucher-item">
+                    <div class="voucher-detail-top">
+                        <div>
+                            <h2 class="voucher-item-name">MÃ GIẢM 10K</h2>
+                            <p>Đơn hàng mua sản phẩm Self-helf từ 100k</p>
+                        </div>
+                        <a href="#">Chi tiết</a>
+                    </div>
+                    <div class="voucher-detail-bottom">
+                        <div>
+                            <div class="voucher-progress"></div>
+                            <p>Mua thêm 120k để được nhận ưu đãi</p>
+                        </div>
+                        <a href="#" class="voucher-confirm-btn">Mua thêm</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="voucher-item">
+                    <div class="voucher-detail-top">
+                        <div>
+                            <h2 class="voucher-item-name">MÃ GIẢM 10K</h2>
+                            <p>Đơn hàng mua sản phẩm Self-helf từ 100k</p>
+                        </div>
+                        <a href="#">Chi tiết</a>
+                    </div>
+                    <div class="voucher-detail-bottom">
+                        <div>
+                            <div class="voucher-progress"></div>
+                            <p>Mua thêm 120k để được nhận ưu đãi</p>
+                        </div>
+                        <a href="#" class="voucher-confirm-btn">Mua thêm</a>
+                    </div>
+                </div>
+                <hr>
+                <p style="color: lightgray; font-size: 1em">Có thể áp dụng đồng thời nhiều mã giảm giá!</p>
+            </div>
+            <div class="total-box">
+                <div class="total">
+                    <p>Thành tiền</p>
+                    <p class="price-in-bill">0đ</p>
+                </div>
+                <hr>
+                <div class="total-vat">
+                    <h3>Tổng số tiền (Gồm VAT)</h3>
+                    <p class="price-in-bill-vat">0đ</p>
+                </div>
+                <a href="" class="payment-btn">thanh toán</a>
+                <p style="color: red">(Giảm giá trên web chỉ áp dụng với bán lẻ)</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="/assets/img/Gradient_logo.png" alt="Giang Ebook" class="logo">
+        <div class="footer-item contact">
+            <h4 class="footer-item-title">Liên Hệ Với Chúng Tôi</h4>
+            <strong>Khiếu nại:</strong><span>hohoanggiang80@gmail.com</span>
+            <br>
+            <strong>Hỗ Trợ:</strong><span>hohoanggiang80@gmail.com</span>
+            <br>
+            <strong>Thời Gian:</strong>
+            <div>Tất cả các ngày trong tuần trừ ngày lễ Chủ Nhật : 08:00 Sáng - 11:00 Trưa</div>
+        </div>
+        <div class="footer-item information">
+            <h4 class="footer-item-title">Thông Tin</h4>
+            <a href="">Giới thiệu</a>
+            <br>
+            <a href="">Chính sách</a>
+        </div>
+        <div class="footer-item social-media">
+            <h4 class="footer-item-title">Mạng Xã Hội</h4>
+            <ul class="social-button">
+                <li><a href=""><img src="https://thuvienpdf.com/image/fb.svg" alt="" class="social-img"></a></li>
+                <li><a href=""><img src="https://thuvienpdf.com/image/tw.svg" alt="" class="social-img"></a></li>
+                <li><a href=""><img src="https://thuvienpdf.com/image/youtube.svg" alt="" class="social-img"></a></li>
+                <li><a href=""><img src="https://thuvienpdf.com/image/tiktok.svg" alt="" class="social-img"></a></li>
+            </ul>
+        </div>
+        <div class="footer-item coppyright">
+            <p><strong>Tuyên bố miễn trừ trách nhiệm: </strong>tất cả dữ liệu được sưu tập từ Internet, nếu có bất kỳ thắc
+                mắc hay khiếu nại xin hãy liên hệ ngay với chúng tôi để được gỡ bỏ</p>
+            <div>Copyright © 2022 Thư Viện PDF. All Right Reserved.
+                Design By Thư Viện PDF 2022
+            </div>
+            <div>Clone by Hoàng Giang</div>
+        </div>
+    </div>
+</body>
+<script src="/js/cart.js"></script>
+</html>

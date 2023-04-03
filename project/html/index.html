@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giang Ebook</title>
+    <link rel="icon" type="image/x-icon" href="/assets/img/web_Logo.png">
+    <link rel="stylesheet" href="/project/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<body onload="display_cart()">
+    <div class="container">
+        <div class="header">
+            <div class="header-iner" style="max-width: 1024px;">
+                <a href="index.html">
+                    <img src="/img/logowithwhitebackground.png" alt="" class="logo">
+                </a>
+                <ul class="nav">
+                    <li class="nav-item"><a href="/project/html/index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a href="">Thể loại</a>
+                        <div class="menu-child"> 
+                            <div class="menu-child-items">
+                                <ul class="menu-child-list">
+                                    <li><a href="/project/html/tamli-kynangsong.html">Tâm lý - Kỹ năng sống</a></li>
+                                    <li><a href="">Văn học</a></li>
+                                    <li><a href="">Truyện tranh</a></li>
+                                    <li><a href="">Tài liệu - Giáo trình</a></li>
+                                    <li><a href="">Kinh tế</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-items">
+                                <ul class="menu-child-list">
+                                    <li><a href="/project/html/tieuthuyet.html">Tiểu thuyết</a></li>
+                                    <li><a href="">Lập trình</a></li>
+                                    <li><a href="">Truyện tranh</a></li>
+                                    <li><a href="">Giải trí</a></li>
+                                    <li><a href="">Ngôn tình</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-items">
+                                <ul class="menu-child-list">
+                                    <li><a href="/project/html/triethoc.html">Triết học</a></li>
+                                    <li><a href="">Kiếm hiệp</a></li>
+                                    <li><a href="">Tiếng Anh</a></li>
+                                    <li><a href="">Lịch sử</a></li>
+                                    <li><a href="">Phật giáo</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-items">
+                                <ul class="menu-child-list">
+                                    <li><a href="/project/html/laptrinh.html">Lập trình C</a></li>
+                                    <li><a href="">Java</a></li>
+                                    <li><a href="">Python</a></li>
+                                    <li><a href="">Java Script</a></li>
+                                    <li><a href="">HTML-CSS</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu-child-items">
+                                <ul class="menu-child-list">
+                                    <li><a href="/project/html/cotich-thanthoai.html">Cổ tích - Thần thoại</a></li>
+                                    <li><a href="">Truyện ma - Kinh dị</a></li>
+                                    <li><a href="">Marketing</a></li>
+                                    <li><a href="">Trinh thám - Hình sự</a></li>
+                                    <li><a href="">Kinh tế - Quản lí</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="/project/html/sachtonghop.html">Sách tổng hợp</a></li>
+                    <li class="nav-item"><a href="">Blog</a></li>
+                    <li class="nav-item"><a href="/project/html/gioithieu.html">Giới thiệu</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" class="input" placeholder="Search...">
+                    <button class="btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="signin">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="/project/html/Log-in-form.html">Đăng Nhập</a>
+                </div>
+                <div class="shopping-cart">
+                    <span name = "number of product" id="qty">0</span>
+                    <a href="/project/html/cart.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Swiper -->
+        <br><br><br><br><br>
+        <div class="body">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/Y5TLuEBia0.webp" data-src="https://sachbo.thuvienpdf.com/Y5TLuEBia0.webp" class=" lazyloaded" alt=" Bộ sách Tào tháo thánh nhân đê tiện">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/E695Td1.webp" data-src="https://sachbo.thuvienpdf.com/E695Td1.webp" class=" lazyloaded" alt="Bộ sách Địch Công Kỳ Án">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/8RMRS81.webp" data-src="https://sachbo.thuvienpdf.com/8RMRS81.webp" class=" lazyloaded" alt="Bộ sách khoa học trong tầm tay">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/0GR0Vt1.webp" data-src="https://sachbo.thuvienpdf.com/0GR0Vt1.webp" class=" lazyloaded" alt="Truyện tranh Inuyasha - Khuyển Dạ Xoa">
+                    </div>
+                    <div class="swiper-slide"><img src="https://sachbo.thuvienpdf.com/0f08T91.webp" data-src="https://sachbo.thuvienpdf.com/0f08T91.webp" class=" lazyloaded" alt="Những cuộc phiêu lưu của Tintin">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/91CmZfeYLP.webp" data-src="https://sachbo.thuvienpdf.com/91CmZfeYLP.webp" class=" lazyloaded" alt="Bộ truyện tranh vua pháp thuật (shaman king)">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/T8iPiN0.webp" data-src="https://sachbo.thuvienpdf.com/T8iPiN0.webp" class=" lazyloaded" alt="Các quyển sách viết về Đại Tướng Võ Nguyên Giáp">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/ppsVkS0.webp" data-src="https://sachbo.thuvienpdf.com/ppsVkS0.webp" class=" lazyloaded" alt="Bộ sách Thế giới kỳ bí của ngài Benedict">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://sachbo.thuvienpdf.com/7Yku351.webp" data-src="https://sachbo.thuvienpdf.com/7Yku351.webp" class=" lazyloaded" alt="Bộ truyện tranh Đầu bếp trứ danh">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="hightlight-container">
+                <h1 class="hightlight-header">Danh mục cần chú ý</h1>
+                <div class="hightlight-item">
+                    <div class="item item1">
+                        <h5 class="tilte">Truyện tranh</h5>
+                        <p class="content">Doraemon, Thám tử lừng danh...</p>
+                        <button class="detail"><a href="">Chi tiết</a></button>
+                    </div>
+                    <div class="item item2">
+                        <h5 class="tilte">Thư viện pháp luật</h5>
+                        <p class="content">Sách luật, tài liệu, giáo trình...</p>
+                        <button class="detail"><a href="">Chi tiết</a></button>
+                    </div>
+                    <div class="item item3">
+                        <h5 class="tilte">Sách y khoa</h5>
+                        <p class="content">Tạp chí y học, y học cổ truyền...</p>
+                        <button class="detail"><a href="">Chi tiết</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="newbooks-container">
+                <h2 class="newbook-title">Sách mới</h2>
+                <div class="newbook-items">
+                    <div class="newbook book1">
+                        <a href="/project/html/ditimlesong.html"><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-di-tim-le-song.jpg" alt=""></a>
+                        <div class="newbook-content">
+                            <div class="newbook-name">Đi Tìm Lẽ Sống</div>
+                            <div class="newbook-author">Viktor Emil Frankl</div>
+                        </div>
+                    </div>
+                    <div class="newbook book2">
+                        <a href="/project/html/ping-vuotkhoiaotu.html">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ping-vuot-khoi-ao-tu.jpg" alt="">
+                        </a>
+                        <div class="newbook-content">
+                            <div class="newbook-name">Ping – Vượt Khỏi Ao Tù</div>
+                            <div class="newbook-author">Stuart Avery Gold</div>
+                        </div>
+                    </div>
+                    <div class="newbook book3">
+                        <a href="/project/html/tocdocuaniemtin.html">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-toc-do-cua-niem-tin.jpg" alt="">
+                        </a>
+                        <div class="newbook-content">
+                            <div class="newbook-name">Tốc Độ Của Niềm Tin</div>
+                            <div class="newbook-author">Stephen R. Covey</div>
+                        </div>
+                    </div>
+                    <div class="newbook book4">
+                        <a href="/project/html/tamlihocdamdong.html">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-tam-ly-hoc-dam-dong.jpg" alt="">
+                        </a>
+                        <div class="newbook-content">
+                            <div class="newbook-name">Tâm lý học đám đông</div>
+                            <div class="newbook-author">Gustave Le Bos</div>
+                        </div>
+                    </div>
+                    <div class="newbook book5">
+                        <a href="/project/html/chokhenhanvang.html">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-cho-khe-nhan-vang.jpg" alt="">
+                        </a>
+                        <div class="newbook-content">
+                            <div class="newbook-name">Cho Khế Nhận Vàng</div>
+                            <div class="newbook-author">Adam Grant</div>
+                        </div>
+                    </div>
+                    <div class="newbook book6">
+                        <a href="/project/html/taisaocacquocgiathatbai.html">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-tai-sao-cac-quoc-gia-that-bai.jpg" alt="">
+                        </a>
+                        <div class="newbook-content">
+                            <div class="newbook-name">Tại Sao Các Quốc Gia Thất Bại</div>
+                            <div class="newbook-author">Daron Acemoglu - James A. Robinson</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-type-container">
+                <div class="type type-item1">
+                    <a href="/project/html/triethoc.html" class="type-link">
+                        <img src="https://thuvienpdf.com/image/triethoc.svg" alt="" class="background-type">
+                    </a>
+                </div>
+                <div class="type type-item2">
+                    <a href="">
+                        <img src="http://thuvienpdf.com/image/sinhhoc.svg" alt="" class="background-type">
+                    </a>
+                </div>
+                <div class="type type-item3">
+                    <a href="">
+                        <img src="http://thuvienpdf.com/image/toanhoc.svg" alt="" class="background-type">
+                    </a>
+                </div>
+                <div class="type type-item4">
+                    <a href="">
+                        <img src="http://thuvienpdf.com/image/vatly.svg" alt="" class="background-type">
+                    </a>
+                </div>
+            </div>
+            <div class="update-threerows-sixcolumns-flexwrap">
+                <h1 class="update-title-gold">Thư viện mới cập nhật</h1>
+                <div class="update-container">
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://thuvienpdf.com/anh-tang-thu-vien/61-lanh-lung.webp" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Lạnh Lùng</div>
+                            <div class="update-author">Nhất Linh</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://thuvienpdf.com/anh-tang-thu-vien/aZ-cuoc-chien-am-thuc.webp" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Cuộc Chiến Ẩm Thực</div>
+                            <div class="update-author">TSUKUDA Yuuto</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://thuvienpdf.com/anh-tang-thu-vien/Gh-lac-duong.webp" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Lạc Đường</div>
+                            <div class="update-author">Hồ Biểu Chánh</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://thuvienpdf.com/anh-tang-thu-vien/kt-mui-huong-tram.webp" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Mùi Hương Trầm</div>
+                            <div class="update-author">Nguyễn Tường Bách</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://thuvienpdf.com/anh-tang-thu-vien/E2-hiep-khach-giang-ho.webp" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Hiệp Khách Giang Hồ</div>
+                            <div class="update-author">JEON Geuk Jin</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://thuvienpdf.com/anh-tang-thu-vien/aP-loi-the-truoc-mieu.webp" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Lời Thề Trước Miễu</div>
+                            <div class="update-author">Hồ Biểu Chánh</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://thuvienpdf.com/anh-tang-thu-vien/EF-leu-chong.webp" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Lều Chõng</div>
+                            <div class="update-author">Ngô Tất Tố</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/wp-content/uploads/Th%C3%A0nh-C%C3%A1t-T%C6%B0-H%C3%A3n-V%C3%A0-S%E1%BB%B1-H%C3%ACnh-Th%C3%A0nh-Th%E1%BA%BF-Gi%E1%BB%9Bi-Hi%E1%BB%87n-%C4%90%E1%BA%A1i.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Thành Cát Tư Hãn Và Sự Hình Thành Thế Giới Hiện Đại</div>
+                            <div class="update-author">Jack Weatherford</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-nhung-ngay-tho-au.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Những Ngày Thơ Ấu</div>
+                            <div class="update-author">Nguyên Hồng</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-de-thien-de-thich.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Đế Thiên Đế Thích</div>
+                            <div class="update-author">Nguyễn Hiến Lê</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-vo-nguyen-giap-chien-thang-bang-moi-gia.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Võ Nguyên Giáp – Chiến Thắng Bằng Mọi Giá</div>
+                            <div class="update-author">Cecil B. Currey</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-viet-duoi-anh-den-dau.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Viết Dưới Ánh Đèn Dầu</div>
+                            <div class="update-author">Bùi Xuân Phái</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-putin-su-troi-day-cua-mot-con-nguoi.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Putin – Sự Trỗi Dậy Của Một Con Người</div>
+                            <div class="update-author">Trương Dự</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-cat-bui-chan-ai.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Cát Bụi Chân Ái</div>
+                            <div class="update-author">Tô Hoài</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="/project/html/caphecungtony.html">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-ca-phe-cung-tony.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Cà Phê Cùng Tony</div>
+                            <div class="update-author">Tony Buổi Sáng</div>
+                        </div>
+                    </div>
+                    <div class="update-items">  
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-giang-ho-sai-gon.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">Giang Hồ Sài Gòn</div>
+                            <div class="update-author">Vũ Quang Hùng</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <a href="">
+                            <img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-john-di-tim-hung.jpg" alt="">
+                        </a>
+                        <div class="update-content">
+                            <div class="update-book-name">John Đi Tìm Hùng</div>
+                            <div class="update-author">Trần Hùng John</div>
+                        </div>
+                    </div>
+                    <div class="update-items">
+                        <div class="update-image">
+                            <a href="">
+                                <img src="https://thuvienpdf.com/anh-tang-thu-vien/jz-long-da-dan-ba.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="update-content">
+                            <div class="update-book-name">Lòng dạ đàn bà</div>
+                            <div class="update-author">Hồ Biểu Chánh</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="colletions-container">
+                <div class="collections collection-1"><a href=""><img src="https://thuvienpdf.com/image/hoahoc.svg" alt=""></a></div>
+                <div class="collections collection-2"><a href=""><img src="https://thuvienpdf.com/image/vanhoc.svg" alt=""></a></div>
+                <div class="collections collection-3"><a href=""><img src="https://thuvienpdf.com/image/cntt.svg" alt=""></a></div>
+            </div>
+            <div class="hotlist-container">
+                <h1 class="hotlist-title">Sách Đang Hot</h1>
+                <div class="hotlist-items">
+                    <div class="items hot-item-1">
+                        <a href=""><img src="https://images.thuvienpdf.com/ESxpuYkpi9.webp" alt=""></a>
+                        <div class="hotlist-content">
+                            <div class="hotlist-name">Trên Đường Băng</div>
+                            <div class="hotlist-author">Tony Buổi Sáng</div>
+                        </div>
+                    </div>
+                    <div class="items hot-item-2">
+                        <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dao-hoang.jpg" alt=""></a>
+                        <div class="hotlist-content">
+                            <div class="hotlist-name">Đảo Hoang</div>
+                            <div class="hotlist-author">Tô Hoài</div>
+                        </div>
+                    </div>
+                    <div class="items hot-item-3">
+                        <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-luat-cua-warren-buffett.jpg" alt=""></a>
+                        <div class="hotlist-content">
+                            <div class="hotlist-name">Luật Của Warren Buffett</div>
+                            <div class="hotlist-author">Jeremy C. Miller</div>
+                        </div>
+                    </div>
+                    <div class="items hot-item-4">
+                        <a href=""><img src="https://images.thuvienpdf.com/xhWWVdq04M.webp" alt=""></a>
+                        <div class="hotlist-content">
+                            <div class="hotlist-name">Cô Giáo Thảo</div>
+                            <div class="hotlist-author">Vô Danh</div>
+                        </div>
+                    </div>
+                    <div class="items hot-item-5">
+                        <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dam-dong-co-don.jpg" alt=""></a>
+                        <div class="hotlist-content">
+                            <div class="hotlist-name">Đám Đông Cô Đơn</div>
+                            <div class="hotlist-author">David Riesman</div>
+                        </div>
+                    </div>
+                    <div class="items hot-item-6">
+                        <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-binh-phap-ton-tu.jpg" alt=""></a>
+                        <div class="hotlist-content">
+                            <div class="hotlist-name">Binh Pháp Tôn Tử</div>
+                            <div class="hotlist-author">Tôn Vũ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="three-text-rows-container">
+            <div class="text-container text1">
+                <div class="text-head">
+                    <h2 class="text-title">Phương Châm</h2>
+                    <img src="https://www.iconpacks.net/icons/2/free-rocket-icon-3431-thumb.png" alt="" class="text-icon icon-1">
+                </div>
+                <div class="text-content-container">
+                    <h3 class="text-slogan">Tất cả điều miễn phí, trừ những thứ có phí</h3>
+                    <p class="text-text">Hãy cùng nhau xây dựng một cộng đồng lớn mạnh, và phát triển những thứ miễn phí cho cộng đồng...</p>
+                </div>
+            </div>
+            <div class="text-container text2">
+                <div class="text-head">
+                    <h2 class="text-title">Mục tiêu</h2>
+                    <img src="https://static.thenounproject.com/png/1097401-200.png" alt="" class="text-icon icon-2">
+                </div>
+                <div class="text-content-container">
+                    <h3 class="text-slogan">Phát triển không ngừng nghỉ</h3>
+                    <p class="text-text">Luôn luôn cập nhật những cái mới, để có lợi cho cộng đồng, sách là để đọc...</p>
+                </div>
+            </div>
+            <div class="text-container text3">
+                <div class="text-head">
+                    <h2 class="text-title">Đích đến</h2>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1246/1246827.png" alt="" class="text-icon icon-3">
+                </div>
+                <div class="text-content-container">
+                    <h3 class="text-slogan">Sự hài lòng của người dùng</h3>
+                    <p class="text-text">Chúng tôi luôn muốn mang đến trải nghiệm tốt nhất cho từng người dùng...</p>
+                </div>
+            </div>
+        </div>
+        <div class="recommend-container">
+            <div class="recommend-title">
+                <h1>Gợi ý cho bạn</h1>
+            </div>
+            <div class="recommend-items">
+                <div class="recommend-item item-1">
+                    <a href=""><img src="https://images.thuvienpdf.com/WIC1t4bzFD.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Python Basic: A Self-Teaching Introduction</div>
+                        <div class="recommend_author">H.Bhasin</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-2">
+                    <a href=""><img src="https://images.thuvienpdf.com/wVejy1.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Dã Thảo</div>
+                        <div class="recommend_author">Lỗ Tấn</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-3">
+                    <a href=""><img src="https://images.thuvienpdf.com/Ql10kziPpY.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Data Structures And Algorithms Made Easy In Java</div>
+                        <div class="recommend_author">Narasimha Karumanchi</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-4">
+                    <a href=""><img src="https://images.thuvienpdf.com/RTm5pRunQe.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Learning React Native – Building Mobile Applications with JavaScript</div>
+                        <div class="recommend_author">Bonnie Eisenman</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-5">
+                    <a href=""><img src="https://images.thuvienpdf.com/mqDmSLNI6E.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Tiểu Sử Steve Jobs</div>
+                        <div class="recommend_author">Walter Isaacson</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-6">
+                    <a href=""><img src="https://images.thuvienpdf.com/znrIMQa9mK.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Nghệ Thuật Theo Đuổi Sự Tối Giản</div>
+                        <div class="recommend_author">Greg McKeown</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-7">
+                    <a href=""><img src="https://images.thuvienpdf.com/i8uwvLC4Qz.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Thay Thái Độ Đổi Cuộc Đời</div>
+                        <div class="recommend_author">Keith D. Harrell</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-8">
+                    <a href=""><img src="https://images.thuvienpdf.com/tHtnqxkOFs.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Big Data Analytics With Java</div>
+                        <div class="recommend_author">Rajat Mehta</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-9">
+                    <a href=""><img src="https://images.thuvienpdf.com/gLwQpHrLBL.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Hacking: The Art of Exploitation</div>
+                        <div class="recommend_author">Jon Erickson</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-10">
+                    <a href=""><img src="https://images.thuvienpdf.com/1u9efjEiUJ.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Python and Hacking Made Simple</div>
+                        <div class="recommend_author">Project Syntax</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-11">
+                    <a href=""><img src="https://images.thuvienpdf.com/wm3Sw5igI0.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Python Data Science Handbook. Essential Tools for Working with Data</div>
+                        <div class="recommend_author">Jake VanderPlas</div>
+                    </div>
+                </div>
+                <div class="recommend-item item-12">
+                    <a href=""><img src="https://images.thuvienpdf.com/QcRCSVVZAr.webp" alt=""></a>
+                    <div class="recommend-content">
+                        <div class="recommend-name">Head First Software Development</div>
+                        <div class="recommend_author">Dan Pilone</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="most-download-container">
+            <h1 class="md-title">Sách được tải nhiều nhất</h1>
+            <div class="md-items">
+                <div class="md-item item1">
+                    <a href=""><img src="https://images.thuvienpdf.com/Uil9LEnztp.webp" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Tư Duy Nhanh Và Chậm</div>
+                        <div class="md-author">Daniel Kehlmann</div>
+                    </div>
+                </div>
+                <div class="md-item item2">
+                    <a href=""><img src="https://cdn0.fahasa.com/media/catalog/product/z/4/z4042387166118_caf0ce2c8d41600_1_1.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Người Lạ Dưới Gió Xuân</div>
+                        <div class="md-author">Kii Kanna</div>
+                    </div>
+                </div>
+                <div class="md-item item3">
+                    <a href=""><img src="https://nhasachmienphi.com/wp-content/uploads/tu-huyet-cam-xuc.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Tử Huyệt Cảm Xúc</div>
+                        <div class="md-author">Roy Garn</div>
+                    </div>
+                </div>
+                <div class="md-item item4">
+                    <a href=""><img src="https://nhasachmienphi.com/wp-content/uploads/7-thoi-quen-de-thanh-dat.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">7 Thói Quen Để Thành Đạt</div>
+                        <div class="md-author">Stephen R.Covey</div>
+                    </div>
+                </div>
+                <div class="md-item item5">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-cong-nghe-blockchain.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Công Nghệ Blockchain</div>
+                        <div class="md-author">Nhiều Tác Giả</div>
+                    </div>
+                </div>
+                <div class="md-item item6">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-doi-ngan-dung-ngu-dai.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Đời Ngắn Đừng Ngủ Dài</div>
+                        <div class="md-author">Robin Sharma</div>
+                    </div>
+                </div>
+                <div class="md-item item7">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-loi-song-toi-gian-cua-nguoi-nhat.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Lối Sống Tối Giản Của Người Nhật</div>
+                        <div class="md-author">Sasaki Fumio</div>
+                    </div>
+                </div>
+                <div class="md-item item8">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-tony-buoi-sang-tren-duong-bang.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Trên Đường Băng</div>
+                        <div class="md-author">Tony-Buổi Sáng</div>
+                    </div>
+                </div>
+                <div class="md-item item9">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-barca-duong-den-vinh-quang.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Barca - Đường Đến Vinh Quang</div>
+                        <div class="md-author">Graham Hunter</div>
+                    </div>
+                </div>
+                <div class="md-item item10">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-van-bai-lat-ngua.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Ván Bài Lật Ngửa</div>
+                        <div class="md-author">Nguyễn Trương Thiên Lý</div>
+                    </div>
+                </div>
+                <div class="md-item item11">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dong-rac-cu-tron-bo.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Đống Rác Cũ - Trọn Bộ</div>
+                        <div class="md-author">Nguyễn Công Hoan</div>
+                    </div>
+                </div>
+                <div class="md-item item12">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-lam-di.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Làm Đĩ</div>
+                        <div class="md-author">Vũ Trọng Phụng</div>
+                    </div>
+                </div>
+                <div class="md-item item13">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-dat-rung-phuong-nam.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Đất Rừng Phương Nam</div>
+                        <div class="md-author">Đoàn Giỏi</div>
+                    </div>
+                </div>
+                <div class="md-item item14">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-so-do.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Số Đỏ</div>
+                        <div class="md-author">Vũ Trọng Phụng</div>
+                    </div>
+                </div>
+                <div class="md-item item15">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-tat-den.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Tắt Đèn</div>
+                        <div class="md-author">Ngô Tất Tố</div>
+                    </div>
+                </div>
+                <div class="md-item item16">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-chi-pheo.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Chí Phèo</div>
+                        <div class="md-author">Nam Cao</div>
+                    </div>
+                </div>
+                <div class="md-item item17">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-tuyen-tap-nam-cao.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Tuyển Tập Nam Cao</div>
+                        <div class="md-author">Nam Cao</div>
+                    </div>
+                </div>
+                <div class="md-item item18">
+                    <a href=""><img src="https://nhasachmienphi.com/images/thumbnail/nhasachmienphi-vang-bong-mot-thoi.jpg" alt="" class="md-img"></a>
+                    <div class="md-content">
+                        <div class="md-name">Vang Bóng Một Thời</div>
+                        <div class="md-author">Nguyễn Tuân</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dn-three-columns-container">
+            <h1 class="dn-title">Danh ngôn hay về sách</h1>
+            <div class="dn-content-container">
+                <div class="content-items item1">
+                    <div class="content-img"><img src="https://thuvienpdf.com/image/dn3.webp" alt=""></div>
+                    <div class="author-name-container">
+                        <div class="dn-author">--Hồ Chí Minh</div>
+                        <div class="dn-content">Đọc được nhiều sách tốt nhưng nếu không đem áp dụng vào thực tiễn cuộc sống thì chẳng khác nào “cái hòm đựng sách”</div>
+                    </div>
+                </div>
+                <div class="content-items item2">
+                    <div class="content-img"><img src="https://thuvienpdf.com/image/dn2.webp" alt=""></div>
+                    <div class="author-name-container">
+                        <div class="dn-author">--Alexander Hamilton</div>
+                        <div class="dn-content">Nghệ thuật đọc là lướt qua một cách khôn ngoan. The art of reading is to skip judiciously.</div>
+                    </div>
+                </div>
+                <div class="content-items item3">
+                    <div class="content-img"><img src="https://thuvienpdf.com/image/dn1.webp" alt=""></div>
+                    <div class="author-name-container">
+                        <div class="dn-author">--Voltaire</div>
+                        <div class="dn-content">Những gì sách dạy chúng ta cũng giống như lửa. Chúng ta lấy nó từ nhà hàng xóm, thắp nó trong nhà ta, đem nó truyền cho người khác, và nó trở thành tài sản của tất cả mọi người.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <img src="/assets/img/Gradient_logo.png" alt="Giang Ebook" class="logo">
+            <div class="footer-item contact">
+                <h4 class="footer-item-title">Liên Hệ Với Chúng Tôi</h4>
+                <strong>Khiếu nại:</strong><span>hohoanggiang80@gmail.com</span>
+                <br>
+                <strong>Hỗ Trợ:</strong><span>hohoanggiang80@gmail.com</span>
+                <br>
+                <strong>Thời Gian:</strong>
+                <div>Tất cả các ngày trong tuần trừ ngày lễ Chủ Nhật : 08:00 Sáng - 11:00 Trưa</div>
+            </div>
+            <div class="footer-item information">
+                <h4 class="footer-item-title">Thông Tin</h4>
+                <a href="">Giới thiệu</a>
+                <br>
+                <a href="">Chính sách</a>
+            </div>
+            <div class="footer-item social-media">
+                <h4 class="footer-item-title">Mạng Xã Hội</h4>
+                <ul class="social-button">
+                    <li><a href=""><img src="https://thuvienpdf.com/image/fb.svg" alt="" class="social-img"></a></li>
+                    <li><a href=""><img src="https://thuvienpdf.com/image/tw.svg" alt="" class="social-img"></a></li>
+                    <li><a href=""><img src="https://thuvienpdf.com/image/youtube.svg" alt="" class="social-img"></a></li>
+                    <li><a href=""><img src="https://thuvienpdf.com/image/tiktok.svg" alt="" class="social-img"></a></li>
+                </ul>
+            </div>
+            <div class="footer-item coppyright">
+                <p><strong>Tuyên bố miễn trừ trách nhiệm: </strong>tất cả dữ liệu được sưu tập từ Internet, nếu có bất kỳ thắc mắc hay khiếu nại xin hãy liên hệ ngay với chúng tôi để được gỡ bỏ</p>
+                <div>Copyright © 2022 Thư Viện PDF. All Right Reserved.
+                    Design By Thư Viện PDF 2022
+                </div>
+                <div>Clone by Hoàng Giang</div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    </script>
+</body>
+</html> 

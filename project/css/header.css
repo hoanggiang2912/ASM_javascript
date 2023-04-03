@@ -1,0 +1,346 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary: #141523;
+    --secondary: rgb(25, 109, 118);
+    --title-color: #3db3c1;
+    --clr-test1: #d8c8b8;
+    --clr-test4: #f8f1e9;
+    --clr-test3: #85d4cf;
+    --clr-test2: #8e7966;
+    --clr-test5: gold;
+    --clr-test6: #7bc4a0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100%;
+    background-color: var(--clr-test2);
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    /* background-image: linear-gradient( to right, #0B5F6A, #89D8D3); */
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+}
+
+.header-iner{
+    max-width: 1024px;
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+    transition: transform .3s ease-in-out;
+}
+
+.logo:hover{
+    transform: translateY(-10px);
+}
+
+.nav{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav > li{
+    list-style-type: none;
+    line-height: 100px;
+}   
+
+.nav > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    transition: .25s ease;
+}
+
+.nav > li > a:hover{
+    color: var(--clr-test6);
+}
+
+.nav li a {
+    position: relative;
+    display: block;
+    line-height: inherit;
+}
+
+.nav > li > a::before{
+    content: "";
+    border-radius: 3px;
+    width: 0;
+    height: 2.5px;
+    background-color: var(--clr-test6);
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    transition: width 0.25s linear;
+}
+
+.nav > li > a:hover::before{
+    width: 100%;
+    color: var(--secondary);
+}
+
+/* subnav */
+.menu-child{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+}
+
+.menu-child-items{
+    width: 25%;
+    text-align: center;
+}
+
+.menu-child-list li{
+    list-style-type: none;
+    border-top: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.menu-child-list li a{
+    text-decoration: none;
+    color: black;
+    line-height: 100px;
+    transition: 0.2s linear;
+    display: block;
+    line-height: 100px;
+}
+
+.nav-item:hover .menu-child{
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-child-list li:hover{
+    background-color: #126670;
+    transition: background-color 0.3s linear;
+}
+
+.menu-child-list li a:hover{
+    color: white;   
+}
+
+/**hidden search bar*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* overflow: hidden; */
+    margin: 0;
+}
+
+.search {
+    position: relative;
+    height: 50px;
+    z-index: 100;
+}
+
+.search .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+    border-radius: 40px;
+}
+
+.btn {
+    background-color: #fff;
+    border: 0;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.3s ease;
+    border-radius: 40px;
+}
+
+.btn:focus{
+    outline: none;
+    border-radius: 40px;
+}
+
+.input:focus {
+    outline: none;
+    border-radius: 40px;
+}
+
+.search.active .input {
+    width: 200px;
+    border-radius: 40px 0 0 40px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+    border-radius: 0 40px 40px 0;
+}
+.signin a{
+    text-decoration: none;
+    color: white;
+}
+
+.signin{
+    background-color: var(--clr-test3);
+    border-radius: 10px;
+    padding: 15px;
+    transition: .25s ease;
+    color: white;
+}
+.signin:hover{
+    opacity: 0.6;
+    transform: translateY(-5px);
+}
+
+.products{
+    width: 80%;
+    height: 5000px;
+    background-color: var(--clr-test4);
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.products-title{
+    color: var(--clr-test2);
+    margin: 20px 0 20px 20px;
+}
+.products-items{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 15%;
+    height: 250px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+.item img:hover{
+    width: 105%;
+    height: 105%;
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 80px 5px rgba(0,0,0,0.77);
+}
+.item-content{
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: -50px;
+    text-align: center;
+}
+.item-name{
+    font-weight: bold;
+}
+.item-author{
+    color: gold;
+}
+
+.footer{
+    width: 100%;
+    height: 500px;
+    background-color: var(--primary);
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    font-weight: normal;    
+}
+.footer-item{
+    width: 98%;
+    height: 80%;
+    column-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.footer-item-title{
+    margin: 20px 0;
+    color: var(--clr-test1);
+    font-size: 1.5rem;
+}
+.information a{
+    text-decoration: none;
+    color: white;
+}
+.information a:hover{
+    color: var(--title-color);
+    transition: color 0.2s ease-in-out;
+}
+.coppyright{
+    grid-column: 2/5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.coppyright strong{
+    color: var(--clr-test1);
+}
+.social-button{
+    display: flex;
+    justify-content: space-around;
+}
+.social-button li{
+    list-style-type: none;
+}
+.social-img{
+    transition: transform .3s ease-in-out;
+}
+.social-img:hover{
+    transform: translateY(-10px);
+}
+/* scrollbar custom */
+body::-webkit-scrollbar{
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(to bottom, #93FB9D,#09C7FB );
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #fff;
+    border-radius: 10px;
+}
