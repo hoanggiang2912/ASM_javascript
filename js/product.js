@@ -2,7 +2,6 @@
 var products_arr = JSON.parse(localStorage.getItem('cart')) || []
 const qty = document.querySelector(".qty")
 var having = false
-console.log(products_arr)
 
 function add_to_cart(id , name , price, src){
     for(let i in products_arr){
@@ -25,8 +24,10 @@ function add_to_cart(id , name , price, src){
     localStorage.setItem('cart' , JSON.stringify(products_arr))
 }
 
-
-
+function display_qty () {
+    qty.innerText = products_arr.length
+}
+display_qty()
 
 
 

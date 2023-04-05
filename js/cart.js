@@ -23,7 +23,7 @@ function display_cart (){
         qty.style.display = "none"
     }
     //display item
-    cartLength = cart.length
+    var cartLength = cart.length
     qty.innerText = cartLength
     for(let i = 0 ; i < cart_items.length ; i++){
         var cart_item = cart_items[i]
@@ -61,6 +61,7 @@ function minus (){
             }
             totalQty[i].innerText = show_qty
             calculator_each_product()
+            calculator_all_products()
         })
     }
 }
@@ -71,6 +72,7 @@ function plus(){
             show_qty++
             totalQty[i].innerText = show_qty
             calculator_each_product()
+            calculator_all_products()
         })
     }
 }
@@ -88,8 +90,7 @@ function calculator_each_product(){
 var final_price = 0
 function calculator_all_products(){
     for(let i in cart){
-        var cart_item = cart[i]
-        final_price += cart_item[2] * cart_item[4]
+        final_price += Number(totalPrice[i].innerText)
         priceInBill.innerText = final_price
         priceInBillVAT.innerText = final_price + final_price*0.1
     }
@@ -114,7 +115,9 @@ select_all()
 function delete_item(){
     for(let i = 0 ; i < cart.length ; i++){
         deleteBtns[i].addEventListener("click" , () => {
-            cart.splice(i , 1)
+            var new_cart = cart.splice(i , 1)
+            localStorage.setItem("cart" , JSON.stringify(new_cart))
+            display_item_after_delete (i)
         })
     }
 }
@@ -123,6 +126,19 @@ function delete_item(){
 //show the cart again
 delete_item()
 
-function price_in_bill(){
+function display_item_after_delete (btn_index) {
+    var cartLength = cart.length
+    qty.innerText = cartLength
+    for(let i = 0 ; i < cart_items.length ; i++){
+        var cart_item = cart_items[i]
+        cart_item.setAttribute("index-data" , i)
+        var cartItemIndex = cart_item.getAttribute("index-data")
+        if(cartItemIndex  == btn_index){
+            cart_item.style.display = "none"
+        }
+    }
+}
 
+function price_in_bill(){
+    
 }

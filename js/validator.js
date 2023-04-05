@@ -6,12 +6,12 @@ function Validator(Option){
         var errorElement = inputElement.parentElement.querySelector(Option.errorSelector)
         if(errorMessage){
             errorElement.innerText = errorMessage
-            var messageElement = inputElement.parentElement.querySelector("#form-message")
+            var messageElement = inputElement.parentElement.querySelector(Option.errorSelector)
             messageElement.classList.add('invalid')
             inputElement.classList.add('invalid-input')
         }else{
             errorElement.innerText = ''
-            var messageElement = inputElement.parentElement.querySelector("#form-message")
+            var messageElement = inputElement.parentElement.querySelector(Option.errorSelector)
             messageElement.classList.remove('invalid')
             inputElement.classList.remove('invalid-input')
         }
@@ -30,7 +30,7 @@ function Validator(Option){
                 inputElement.oninput  = function () {
                     var errorElement = inputElement.parentElement.querySelector(Option.errorSelector)
                     errorElement.innerText = ''
-                    var messageElement = inputElement.parentElement.querySelector("#form-message")
+                    var messageElement = inputElement.parentElement.querySelector(Option.errorSelector)
                     messageElement.classList.remove('invalid')
                     inputElement.classList.remove('invalid-input')
                 }
@@ -69,5 +69,4 @@ Validator.isPassword = function (selector) {
             return password_regex.test(value) ? undefined : 'Mật khẩu có ít nhất 8 kí tự gồm 1 chữ in hoa và 1 số'
         }
     }
-
 }
