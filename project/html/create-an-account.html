@@ -17,21 +17,31 @@
                     <h1>Create an account</h1>
                     <h4>Let's get started with your own account</h4>
                 </div>
-                <div class="content-input">
-                    <div class="input-container">
-                        <input type="text" class="input name-input" placeholder=" "><label for="">Name</label>
+                <form id="create-account-form" class="content-input">
+                    <div class="input-container" id="form-group">
+                        <input type="text" class="input name-input" placeholder=" " id="full-name">
+                        <label for="">Name</label>
+                        <span id="form-message"></span>
                     </div>
-                    <div class="input-container">
-                        <input type="text" class="input email-input" placeholder=" "><label for="">Email</label>
+                    <div class="input-container" id="form-group">
+                        <input type="text" class="input email-input" placeholder=" " id="email">
+                        <label for="">Email</label>
+                        <span id="form-message"></span>
                     </div>
-                    <div class="input-container">
-                        <input type="text" class="input password-input" placeholder=" "><label for="">Password</label>
+                    <div class="input-container" id="form-group">
+                        <input type="password" class="input password-input" placeholder=" " id="password">
+                        <label for="">Password</label>
+                        <span id="form-message"></span>
                     </div>
-                </div>
+                </form>
                 <div class="content-btn">
                     <button class="btn create-account-btn">Create account</button>
-                    <button class="btn google-btn"><i class="fa-brands fa-google"></i> Sign in with Google</button>
-                    <button class="btn github-btn"><i class="fa-brands fa-github"></i> Sign in with Github</button>
+                    <button class="btn google-btn">
+                        <i class="fa-brands fa-google"></i> Sign in with Google
+                    </button>
+                    <button class="btn github-btn">
+                        <i class="fa-brands fa-github"></i> Sign in with Github
+                    </button>
                     <div class="haa">
                         <h4>
                             Already have an account? 
@@ -46,4 +56,16 @@
         </div>
     </div>
 </body>
+<script src="/js/validator.js"></script>
+<script>
+    Validator({
+        form: '#create-account-form',
+        errorSelector: '#form-message',
+        rules: [
+            Validator.isRequired('#full-name'),
+            Validator.isEmail('#email'),
+            Validator.isPassword('#password')
+        ]
+    })
+</script>
 </html>

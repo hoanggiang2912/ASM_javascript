@@ -93,8 +93,12 @@ body{
 .input{
     padding: 30px;  
     transition: .25s ease;
-    border: 2px solid #eee;
+    border: 1px solid #eee;
+    color: black;
     outline: none;
+}
+.input:hover{
+    border: 1px solid var(--clr-test3)
 }
 .input:focus{
     border: 1px solid var(--clr-test3);
@@ -120,12 +124,11 @@ body{
     width: 82%;
     height: 50px;
     border-radius: 20px;
-    border: none;
     color: white;
     transition: .25s ease;
 }
-.input{
-    color: black;
+.button{
+    border: none;
 }
 .signin{
     background-image: linear-gradient(to right bottom, #07bbed , #3db3c1 , #85d4cf);

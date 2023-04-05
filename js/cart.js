@@ -49,11 +49,9 @@ function display_cart (){
 display_cart()
 
 // calculate total quantity
-
+var show_qty = 0
 function minus (){
     for(let i = 0 ; i < minusBtns.length ; i++){
-        var cart_item = cart[i]
-        var show_qty = cart_item[4]
         minusBtns[i].addEventListener("click" , () => {
             if(show_qty != 0){
                 show_qty--
@@ -67,7 +65,6 @@ function minus (){
     }
 }
 minus()
-var show_qty = 0
 function plus(){
     for(let i = 0 ; i < plusBtns.length ; i++){
         plusBtns[i].addEventListener("click" , () => {

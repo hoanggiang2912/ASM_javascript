@@ -17,7 +17,7 @@
                 <h4 class="author">Margaret Fuller</h4>
             </div>
         </div>
-        <div class="right-container">
+        <form id="log-in-form" class="right-container">
             <div class="form-center">
                 <div class="right-head">
                     <a href="index.html"><img src="/img/logo-login-form.svg" alt="" class="logo"></a>
@@ -27,11 +27,14 @@
                     </div>
                 </div>
                 <div class="right-input-button">
-                    <div class="email-input-container">
-                        <input type="text" class="input email" placeholder=" "><label for="" class="label email-label">Email</label>
+                    <div class="email-input-container" id="form-group">
+                        <input type="text" class="input email" placeholder=" ">
+                        <label for="" class="label email-label">Email</label>
+                        <span id="form-message"></span>
                     </div>
-                    <div class="password-input-container">
+                    <div class="password-input-container" id="form-group">
                         <input type="text" class="input password" placeholder=" "><label for="" class="label password-label">Password</label>
+                        <span id="form-message"></span>
                     </div>
                     <button class="button signin">Sign in</button>
                     <button class="button google"><i class="fa-brands fa-google"></i> Sign in with Google</button>
@@ -41,7 +44,8 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </body>
+<script src="/js/validator.js"></script>
 </html>
