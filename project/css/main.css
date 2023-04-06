@@ -33,7 +33,7 @@ body {
     z-index: 100;
 }
 
-.header-iner {
+.header-inner {
     max-width: 1024px;
     height: inherit;
     margin: 0 auto;
@@ -51,7 +51,7 @@ body {
 }
 
 .logo:hover {
-    transform: translateY(-10px);
+    transform: scale(1.1)
 }
 
 .nav {
