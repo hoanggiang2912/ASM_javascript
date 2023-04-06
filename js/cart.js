@@ -77,8 +77,8 @@ function plus(){
                 cart_item[4]++
                 localStorage.setItem('cart' , JSON.stringify(cart))
                 totalQty[index].innerText = cart_item[4]
-                calculator_each_product()
                 price_in_bill()
+                calculator_each_product()
             })
         }
     // }
@@ -94,15 +94,7 @@ function calculator_each_product(){
     }
 }
 //for all products that displayed
-var final_price = 0
-function calculator_all_products(){
-    for(let i in cart){
-        final_price += Number(totalPrice[i].innerText)
-        priceInBill.innerText = final_price
-        priceInBillVAT.innerText = final_price + final_price*0.1
-    }
-}
-// calculator_all_products()
+
 //select all 
 function select_all (){
     selectAll.checked = true;
@@ -124,8 +116,8 @@ function delete_item(){
         deleteBtns[i].addEventListener("click" , () => {
             var new_cart = cart.splice(i , 1)
             localStorage.setItem("cart" , JSON.stringify(new_cart))
-            display_item_after_delete (i)
             price_in_bill()
+            display_item_after_delete (i)
         })
     }
 }
