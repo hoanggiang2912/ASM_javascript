@@ -366,9 +366,6 @@ hr{
     flex-direction: column;
     gap: 40px;
 }
-.total_qty{
-
-}
 .cart-item-detail-right-btns{
     display: flex;
     justify-content: center;
@@ -413,9 +410,6 @@ hr{
 .voucher-top-right{
     text-decoration: none;
     color: var(--title-color)
-}
-.voucher-item{
-    
 }
 .voucher-detail-top{
     display: flex;
