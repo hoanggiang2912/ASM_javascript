@@ -117,6 +117,11 @@ body{
     color: #ccc;
     transition: .25s ease;
 }
+.eye{
+    position: absolute;
+    top: 18px;
+    right: 80px;
+}
 .invalid{
     display: block;
     color: red;

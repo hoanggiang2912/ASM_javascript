@@ -66,7 +66,7 @@ Validator.isPassword = function (selector) {
         selector: selector,
         test : function (value) {
             var password_regex = /^(?=.*\d)(?=.*[A-Z]).{8,}$/
-            return password_regex.test(value) ? undefined : 'Mật khẩu có ít nhất 8 kí tự gồm 1 chữ in hoa và 1 số'
+            return password_regex.test(value) ? undefined : 'Mật khẩu có 8 kí tự, 1 kí tự hoa, 1 số'
         }
     }
 }
